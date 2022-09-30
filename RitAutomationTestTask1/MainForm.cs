@@ -14,7 +14,7 @@ namespace RitAutomationTestTask1
         private GMapMarker _hoveredMarker;
         private bool _isMarkerDragging;
         private Point _markerOffset;
-        private MapDbDao _dao;
+        private IAsyncMapDao _dao;
 
         public MainForm()
         {
@@ -37,7 +37,7 @@ namespace RitAutomationTestTask1
         {
             Map.Position = new PointLatLng(55.030204, 82.920430);
 
-            _dao = new MapDbDao();
+            _dao = new EntityFrameworkMapDao();
             LoadMarkersAsync();
         }
 

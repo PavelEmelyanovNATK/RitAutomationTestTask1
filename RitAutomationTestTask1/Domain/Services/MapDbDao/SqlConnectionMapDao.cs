@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace RitAutomationTestTask1.Domain.Services.MapDbDao
 {
-    public class MapDbDao
+    public class SqlConnectionMapDbDao : IAsyncMapDao
     {
         //Изменить на название своего сервера
         private const string ServerName = "NHPC\\SQLEXPRESS";
